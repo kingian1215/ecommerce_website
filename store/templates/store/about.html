@@ -30,7 +30,7 @@
 <body>
     <div id="header">
         <div id="logo">
-            <h1 title="Go back to homepage"><span>Fashion HIHI</span><a href="{% url 'product_list' %}"></a></h1>
+            <h1 title="Go back to homepage"><span>亞洲模型工作室</span><a href="{% url 'product_list' %}"></a></h1>
         </div>
         <div id="nav">
             <!--上層固定選單-->
@@ -44,10 +44,9 @@
             <nav id="main-nav">
                 <ul>
                     <li><a href="{% url 'about' %}" class="highlight_txt">About</a></li>
-                    <li><a href="{% url 'product_list' %}">Home</a></li>
-                    <li><a href="{% url 'product_list' %}">Products</a></li>
-                    <li><a href="#">News</a></li>
-                    <li><a href="#">Contact</a></li>
+                    <li><a href="{% url 'product_list' %}">首頁</a></li>
+                    <li><a href="{% url 'product_list' %}">商品</a></li>
+                    <li><a href="#">最新消息</a></li>
                 </ul>
             </nav>
         </div>
@@ -55,8 +54,8 @@
     <!--橫幅圖片-->
     <div class="hero-image" style="background-image: url('{% static 'img/banner1.jpg' %}')">
         <div class="hero-text">
-            <h1 class="font-size-50 line-height_15">Fashion HIHI</h1>
-            <p class="margin_bottom-20">The ocean gave birth to countless lives.</p>
+            <h1 class="font-size-50 line-height_15">亞洲模型工作室</h1>
+            <p class="margin_bottom-20">模型玩具販售.</p>
             <button>Visit it!</button>
         </div>
     </div>
@@ -64,9 +63,9 @@
     <!--滿版文字區塊-->
     <div class="full_layout bg_piggy">
         <div id="maintxt">
-            <h2 class="color_pink">About Us</h2>
-            <p>The ocean gave birth to countless lives.There are many creatures in the ocean that humans don't understand.</p>
-            <p>The ocean gave birth to countless lives.There are many creatures in the ocean that humans don't understand.</p>
+            <h2 class="color_pink">關於我們</h2>
+            <p>目前網站尚在施工中.</p>
+            <p>待完工.</p>
         </div>
     </div>
     <!--LOGO區塊-->
@@ -80,15 +79,15 @@
     <!--表單+地圖區塊-->
     <div class="full_layout bg_piggy padding_v3">
         <div id="main-content">
-            <h2 class="color_pink">Contact Us</h2>
+            <h2 class="color_pink">聯絡我們</h2>
             <div id="contact_form">
                 <form method="post" action="">
-                    <input type="text" name="username" id="username" placeholder="Your name">
-                    <input type="text" name="usermail" id="email" placeholder="Your Email">
-                    <input type="text" name="userphone" id="phone" placeholder="Your Phone">
-                    <textarea name="useropinion" id="useropinion" placeholder="Leave Your Message Here"></textarea>
-                    <input type="submit" value="submit" class="button_pink-gradient cursor_pointer" 
-                        onclick="alert('Thank You!\n We will respond ASAP!')">
+                    <input type="text" name="username" id="username" placeholder="姓名">
+                    <input type="text" name="usermail" id="email" placeholder="您的 Email">
+                    <input type="text" name="userphone" id="phone" placeholder="電話">
+                    <textarea name="useropinion" id="useropinion" placeholder="您的留言"></textarea>
+                    <input type="submit" value="送出" class="button_pink-gradient cursor_pointer" 
+                        onclick="alert('感謝您的留言!\n 我們將盡速回復您!')">
                 </form>
             </div>
             <div id="map">
