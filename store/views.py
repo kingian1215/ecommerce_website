@@ -12,7 +12,7 @@ def product_list(request):
 def about(request):
     return render(request, 'store/about.html')
 
-@login_required #檢查是否登入,若已登入才會執行add_to_cart()
+@login_required(login_url='/admin/') #檢查是否登入,若已登入才會執行add_to_cart()
 def add_to_cart(request, product_id):
     product = Product.objects.get(id=product_id)
     cart, created = Cart.objects.get_or_create(user=request.user)
@@ -22,13 +22,13 @@ def add_to_cart(request, product_id):
     cart_item.save()
     return redirect('product_list')
 
-@login_required
+@login_required(login_url='/admin/')
 def view_cart(request):
     cart = Cart.objects.get(user=request.user)
     total_price = sum(item.product.price * item.quantity for item in cart.cartitem_set.all())
     return render(request,'store/view_cart.html', {'cart':cart, 'total_price':total_price})
 
-# @login_required
+@login_required(login_url='/admin/')
 def checkout(request):
     cart = Cart.objects.get(user=request.user)
     total_price = sum(item.product.price * item.quantity for item in cart.cartitem_set.all())
@@ -41,7 +41,7 @@ def checkout(request):
         return redirect('order_success') # 導向訂單成功頁面
     return render(request,'store/checkout.html', {'cart':cart, 'total_price':total_price})
 
-@login_required
+@login_required(login_url='/admin/')
 def order_success(request):
     return render(request,'store/order_success.html')
 
