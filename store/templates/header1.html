@@ -1,0 +1,36 @@
+<header>
+    <div class='container'>    
+  <nav class="navbar navbar-expand-lg navbar-light">
+    <a class="navbar-brand" href="#">
+      
+      {% load static %}
+      <img src="{% static 'img\logo2.png' %}" width='180'></a>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'product_list' %}">首頁<img src="{% static 'img\Home.png' %}" width='80'></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'view_cart' %}">顯示購物車<img src="{% static 'img\checkout cart.png' %}" width='80'></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'checkout' %}">結帳<img src="{% static 'img\checkout icon.png' %}" width='80'></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">登入<img src="{% static 'img\logoin.png' %}" width='60'></a>
+        </li>	
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'about' %}">關於我們</a>
+        </li>			
+      </ul>
+    
+    </div>
+  </nav>
+  
+    </div>
+  </header>
